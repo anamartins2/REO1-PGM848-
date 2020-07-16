@@ -58,19 +58,21 @@ print(vetor_np)
 print('Lista: ' + str(vetor_np))
 print('Número de elementos do vetor: ' + str(len(vetor_np)))
 it = 0
-for x in range(dim):
+for el in range(0, len(vetor_np),1):
     it = it + 1
     print('Iteração: ' + str(it))
-    print('Na posição ' + str(x) + ' há o elemento: ' + str(vetor_np[int(x)]))
+    print('Na posição ' + str(el) + ' há o elemento: ' + str(vetor_np[int(el)]))
 print('-'*40)
 print('h) Crie uma estrutura de repetição usando o for para fazer a soma dos quadrados de cada valor do vetor.')
-vetor_np = np.array([43.5,150.30,17,28,35,79,20,99.07,15])
-sqd = np.zeros(dim)
+sdq = np.zeros(dim)
 somador=0
-for el in range(dim):
-    sqd[el] = (vetor_np[el])**2
-    somador +=sqd[el]
-print('Soma dos quadrados:'+str(somador))
+for el in range(0, len(vetor_np),1):
+        sdq[el] = (vetor_np[el]) ** 2
+        somador += sdq[el]
+print("Elementos ao quadrado: " + str(sdq))
+print("Soma de quadrados: " + str(somador))
+
+
 print('-'*40)
 print('i) Crie uma estrutura de repetição usando o while para apresentar todos os valores do vetor')
 vetor_np = np.array([43.5,150.30,17,28,35,79,20,99.07,15])
@@ -78,10 +80,11 @@ print('Vetor: ' + str(vetor_np))
 print('Dimensão: ' +str(len(vetor_np)))
 
 pos = 0
-while vetor_np[pos]!=9:
+while vetor_np[pos]!=12:
     print(vetor_np[pos])
     pos = pos+1
     if pos==len(vetor_np):
+        print('Posição igual a: ' + str(pos) + ' - A condição estabelecida retornou true, vamos sair do while')
         break
 print('-'*40)
 print('j) Crie um sequência de valores com mesmo tamanho do vetor original e que inicie em 1 e o passo seja também 1.')
